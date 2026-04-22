@@ -107,7 +107,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
-            
+
 
           </div>
         </div>
@@ -161,10 +161,10 @@ export default function Home() {
               )}
             </div>
 
-            
-            
-        
-            
+
+
+
+
           </nav>
 
 
@@ -186,10 +186,10 @@ export default function Home() {
               FUTURODEFE brinda soluciones financieras modernas y cercanas para
               familias, emprendedores y personas que buscan crecer con respaldo.
             </p>
-            
 
-            
-            
+
+
+
 
             <button
               onClick={() => setMostrarQR(true)}
@@ -213,23 +213,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid gap-6 md:grid-cols-3">
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <button
+              onClick={() => setMostrarCreditos(true)}
+              className="rounded-3xl border border-slate-200 bg-white p-8 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#0f3b2e]/30 hover:shadow-lg"
+            >
               <h3 className="text-2xl font-bold text-[#0f3b2e]">Créditos</h3>
               <p className="mt-4 leading-7 text-slate-600">
-                Soluciones pensadas para impulsar proyectos personales,
-                familiares y productivos.
+                Soluciones pensadas para impulsar proyectos personales, familiares y productivos.
               </p>
-            </div>
+            </button>
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-[#0f3b2e]">
-                Canales digitales
-              </h3>
-              <p className="mt-4 leading-7 text-slate-600">
-                Accede a información, atención y servicios de forma moderna
-                desde cualquier lugar.
-              </p>
-            </div>
+            
           </div>
         </div>
       </section>
