@@ -86,7 +86,7 @@ export default function Home() {
   const creditosInfo = {
     productivo: {
       titulo: "Crédito Productivo",
-      imagen: "/creditoproductivoo.png",
+      imagen: "/productivo.jpeg",
       descripcion:
         "Destinado a la compra de maquinaria, equipos, materia prima y otros insumos, capital de operaciones o inversión.",
       requisitosCliente: requisitosBaseCliente,
@@ -94,7 +94,7 @@ export default function Home() {
     },
     servicios: {
       titulo: "Crédito Capital de Operación",
-      imagen: "/creditooperacion.jpg",
+      imagen: "/boliviia.png",
       descripcion:
         "Crédito destinado a financiar compra o importación de inventario (materias primas, mercaderías) financiamiento de cuentas por cobrar y de internación de mercadería.",
       requisitosCliente: requisitosBaseCliente,
@@ -109,15 +109,15 @@ export default function Home() {
     },
     vehicular: {
       titulo: "Crédito Vehicular",
-      imagen: "/creditovehicular.png",
+      imagen: "/vehiculo.jpeg",
       descripcion:
-        "Adquisición de un vehículo, automóvil, motocicleta u otro medio de transporte.",
+        "Crédito destinado a la compra o adquisición de vehículos nuevos o usados con garantía prendaria del vehículo.",
       requisitosCliente: requisitosBaseCliente,
       respaldo: requisitosBaseRespaldo,
     },
     consumo: {
       titulo: "Crédito de Consumo",
-      imagen: "/creditoconsumo.jpg",
+      imagen: "/consumo.jpg",
       descripcion:
         "Adquisición de bienes o servicios personales no relacionados con una actividad productiva.",
       requisitosCliente: requisitosBaseCliente,
@@ -125,7 +125,7 @@ export default function Home() {
     },
     educativo: {
       titulo: "Crédito Capital de Inversión",
-      imagen: "/creditoinversion.png",
+      imagen: "/creditoinversion.jpg",
       descripcion:
         "Crédito destinado a financiar requerimientos de inversión, como la compra o ampliación de infraestructura, adquisición de nueva tecnología en cuanto a maquinaria y equipamiento.",
       requisitosCliente: requisitosBaseCliente,
