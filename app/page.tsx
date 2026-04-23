@@ -93,10 +93,10 @@ export default function Home() {
       respaldo: requisitosBaseRespaldo,
     },
     servicios: {
-      titulo: "Crédito de Servicios",
-      imagen: "/creditoservicio.png",
+      titulo: "Crédito Capital de Operación",
+      imagen: "/creditooperacion.jpg",
       descripcion:
-        "Para proyectos de microempresas y operaciones destinadas a la prestación de servicios.",
+        "Crédito destinado a financiar compra o importación de inventario (materias primas, mercaderías) financiamiento de cuentas por cobrar y de internación de mercadería.",
       requisitosCliente: requisitosBaseCliente,
       respaldo: requisitosBaseRespaldo,
     },
@@ -120,6 +120,14 @@ export default function Home() {
       imagen: "/creditoconsumo.jpg",
       descripcion:
         "Adquisición de bienes o servicios personales no relacionados con una actividad productiva.",
+      requisitosCliente: requisitosBaseCliente,
+      respaldo: requisitosBaseRespaldo,
+    },
+    educativo: {
+      titulo: "Crédito Capital de Inversión",
+      imagen: "/creditoinversion.png",
+      descripcion:
+        "Crédito destinado a financiar requerimientos de inversión, como la compra o ampliación de infraestructura, adquisición de nueva tecnología en cuanto a maquinaria y equipamiento.",
       requisitosCliente: requisitosBaseCliente,
       respaldo: requisitosBaseRespaldo,
     },
@@ -685,7 +693,7 @@ export default function Home() {
                 >
                   <div className="relative h-52 w-full overflow-hidden">
                     <Image
-                      src="/creditoproductivoo.png"
+                      src="/productivo.jpeg"
                       alt="Crédito Productivo"
                       fill
                       className="object-cover"
@@ -696,8 +704,14 @@ export default function Home() {
                       Crédito Productivo
                     </h4>
                     <p className="mt-4 text-lg leading-8 text-slate-600">
-                      Destinado a la compra de maquinaria, equipos, materia
-                      prima y otros insumos, capital de operaciones o inversión.
+                      Son los créditos de tipo empresarial,
+                      microcrédito o PYME otorgados para desarrollar alguna actividad productiva,
+                      destinados a cubrir necesidades de
+                      financiamiento para Capital de Trabajo,
+                      que permite la compra de materia
+                      prima, insumos, pago de mano de obra
+                      y otros necesarios para ejecutar sus
+                      operaciones
                     </p>
                   </div>
                 </button>
@@ -708,19 +722,18 @@ export default function Home() {
                 >
                   <div className="relative h-52 w-full overflow-hidden">
                     <Image
-                      src="/creditoservicio.png"
-                      alt="Crédito de servicios"
+                      src="/boliviia.png"
+                      alt="Crédito de operacion"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="p-6">
                     <h4 className="text-3xl font-bold text-[#0f3b2e]">
-                      Crédito de Servicios
+                      Crédito Capital de Operación
                     </h4>
                     <p className="mt-4 text-lg leading-8 text-slate-600">
-                      Para proyectos de microempresas y operaciones destinadas a
-                      la prestación de servicios.
+                      Crédito destinado a financiar compra o importación de inventario (materias primas, mercaderías) financiamiento de cuentas por cobrar y de internación de mercadería.
                     </p>
                   </div>
                 </button>
@@ -742,7 +755,7 @@ export default function Home() {
                       Crédito de Comercio
                     </h4>
                     <p className="mt-4 text-lg leading-8 text-slate-600">
-                      Dirigido a actividades de compra y venta de bienes.
+                      Destinado a personas naturales y jurídicas que cuenten con una actividad propia, que les permita generar ingresos suficientes para el pago del microcrédito a adquirir. Está destinado a cubrir necesidades de capital de operación o capital de inversión para actividades de comercio, servicios y transporte en los 9 departamentos a nivel nacional en áreas urbanas, periurbanas y rurales.
                     </p>
                   </div>
                 </button>
@@ -753,7 +766,7 @@ export default function Home() {
                 >
                   <div className="relative h-52 w-full overflow-hidden">
                     <Image
-                      src="/creditovehicular.png"
+                      src="/vehiculo.jpeg"
                       alt="Crédito vehicular"
                       fill
                       className="object-cover"
@@ -764,8 +777,9 @@ export default function Home() {
                       Crédito Vehicular
                     </h4>
                     <p className="mt-4 text-lg leading-8 text-slate-600">
-                      Adquisición de un vehículo, automóvil, motocicleta u otro
-                      medio de transporte.
+                      Crédito destinado a la compra o adquisición de vehículos nuevos o 
+                      usados con garantía prendaria del vehículo, 
+                      los cuales cuentan con póliza contra todo riesgo.
                     </p>
                   </div>
                 </button>
@@ -776,7 +790,7 @@ export default function Home() {
                 >
                   <div className="relative h-52 w-full overflow-hidden">
                     <Image
-                      src="/creditoconsumo.jpg"
+                      src="/consumo.jpg"
                       alt="Crédito de consumo"
                       fill
                       className="object-cover"
@@ -787,8 +801,31 @@ export default function Home() {
                       Crédito de Consumo
                     </h4>
                     <p className="mt-4 text-lg leading-8 text-slate-600">
-                      Adquisición de bienes o servicios personales no
-                      relacionados con una actividad productiva.
+                      Los créditos de consumo están destinados a personas naturales y permiten el financiamiento para la 
+                      compra de productos, bienes y servicios diversos como: Un viaje en familia, un viaje en pareja, 
+                      compra de celulares, tablets, computadoras, electrodoméstico, renovar tu cocina o tu parrillero.
+                    </p>
+                  </div>
+                </button>
+
+                <button
+                  onClick={() => setCreditoSeleccionado(creditosInfo.educativo)}
+                  className="overflow-hidden rounded-3xl border border-slate-200 bg-white text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="relative h-52 w-full overflow-hidden">
+                    <Image
+                      src="/creditoinversion.jpg"
+                      alt="Crédito capital de inversión"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-3xl font-bold text-[#0f3b2e]">
+                      Crédito Capital de Inversión
+                    </h4>
+                    <p className="mt-4 text-lg leading-8 text-slate-600">
+                      Crédito destinado a financiar requerimientos de inversión, como la compra o ampliación de infraestructura, adquisición de nueva tecnología en cuanto a maquinaria y equipamiento.
                     </p>
                   </div>
                 </button>
