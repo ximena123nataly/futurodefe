@@ -38,7 +38,7 @@ export default function Home() {
     },
     {
       tipo: "imagen",
-      imagen: "/slide1.png",
+      imagen: "/slide21.png",
       alt: "Campaña Día de la Madre",
     },
     {
@@ -56,7 +56,7 @@ export default function Home() {
   useEffect(() => {
     const intervalo = setInterval(() => {
       setSlideActual((prev) => (prev + 1) % slidesHero.length);
-    }, 3000);
+    }, 9000);
 
     return () => clearInterval(intervalo);
   }, [slidesHero.length]);
@@ -911,6 +911,28 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* BOTÓN WHATSAPP TIPO BANCO */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+
+        {/* Mensaje flotante tipo banco */}
+        <div className="rounded-xl bg-white px-4 py-2 text-sm text-slate-700 shadow-lg">
+          solicita tu credito hoy!!
+        </div>
+
+        {/* Botón principal */}
+        <a
+          href="https://wa.me/59163226292?text=Hola%20quiero%20información"
+          target="_blank"
+          className="flex h-14 w-14 animate-bounce items-center justify-center rounded-full bg-green-500 shadow-lg hover:scale-110"
+        >
+          <img
+            src="/bot.jpg"
+            alt="WhatsApp"
+            className="h-9 w-9"
+          />
+        </a>
+      </div>
     </main>
   );
 }
