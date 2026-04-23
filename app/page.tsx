@@ -125,156 +125,120 @@ export default function Home() {
     },
   };
 
-  const slideImagen = slidesHero[slideActual];
+
   return (
     <main className="min-h-screen bg-white text-slate-800">
+
+
       {mostrarContacto && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-          <div className="w-full max-w-xl rounded-2xl bg-white shadow-2xl">
-            <div className="flex items-center justify-between border-b px-6 py-4">
-              <h2 className="text-2xl font-normal text-slate-600">
-                Horarios de atención y consulta
-              </h2>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          onClick={() => setMostrarContacto(false)}
+        >
+          <div
+            className="relative w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <button
                 onClick={() => setMostrarContacto(false)}
-                className="text-3xl text-slate-500 hover:text-black"
+                className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-2xl font-bold leading-none text-red-600 shadow-md hover:bg-white"
               >
                 ×
               </button>
-            </div>
 
-            <div className="space-y-7 px-8 py-7 text-slate-700">
-              <div>
-                <h3 className="text-2xl font-semibold text-slate-700">
-                  Futurodefe
-                </h3>
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="text-2xl">📞</span>
-                  <p className="text-2xl font-bold text-[#344E41]">77221750</p>
-                </div>
-                <div className="mt-4 flex items-start gap-3">
-                  <span className="text-xl">⏰</span>
-                  <p className="text-lg leading-8 text-slate-600">
-                    Estamos disponibles las <strong>24 horas</strong> del día,{" "}
-                    <strong>7 días</strong> a la semana.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-semibold text-slate-700">
-                  WhatsApp
-                </h3>
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="text-2xl">💬</span>
-                  <p className="text-2xl font-bold text-[#344E41]">
-                    77221750 - 63226292 - 74858851
-                  </p>
-                </div>
-                <div className="mt-4 flex items-start gap-3">
-                  <span className="text-xl">⏰</span>
-                  <p className="text-lg leading-8 text-slate-600">
-                    Estamos disponibles las <strong>24 horas</strong> del día,{" "}
-                    <strong>7 días</strong> a la semana.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-semibold text-slate-700">
-                  Correo electrónico
-                </h3>
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="text-2xl">📧</span>
-                  <p className="text-2xl font-bold text-[#344E41]">
-                    futurodefe027@gmailcom
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/contactoo.png"
+                alt="Atención al cliente FUTURODEFE"
+                width={1600}
+                height={900}
+                className="mx-auto max-h-[80vh] w-auto max-w-full object-contain"
+                priority
+              />
             </div>
           </div>
         </div>
       )}
 
+
+
+
+
+
       <div className="bg-[#0f3b2e] text-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 px-6 py-3 text-sm md:justify-between md:px-10">
-          <div className="flex flex-wrap items-center gap-6">
+        <div className="mx-auto flex h-[151px] max-w-7xl items-center justify-between px-6 md:px-10">
+          <div className="flex items-center gap-5">
+            <Image
+              src="/logouno.png"
+              alt="Logo FUTURODEFE"
+              width={115}
+              height={115}
+              className="object-contain"
+            />
+
+            <div>
+              <h1 className="text-[42px] font-extrabold leading-none text-white">
+                FUTURODEFE
+              </h1>
+              <p className="mt-2 text-[15px] text-white/90">
+                Fe que impulsa tu futuro.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-8 text-[14px] md:gap-10">
             <button
               onClick={() => setMostrarContacto(true)}
               className="flex items-center gap-2 text-white hover:text-[#d4af37]"
             >
-              <Phone size={18} strokeWidth={2} />
-              <span>Información de contacto</span>
+              <Phone size={15} strokeWidth={2} />
+              <span>Atención al cliente</span>
             </button>
 
             <button
               onClick={() => setMostrarPuntos(true)}
               className="flex items-center gap-2 text-white hover:text-[#d4af37]"
             >
-              <MapPin size={18} strokeWidth={2} />
-              <span>Puntos de atención</span>
+              <MapPin size={16} strokeWidth={2} />
+              <span>Agencias y sucursales</span>
             </button>
 
             <button
               onClick={() => setMostrarNosotros(true)}
               className="flex items-center gap-2 text-white hover:text-[#d4af37]"
             >
-              <Info size={18} strokeWidth={2} />
+              <Info size={15} strokeWidth={2} />
               <span>Sobre nosotros</span>
             </button>
           </div>
-
-          <div className="flex flex-wrap items-center gap-6"></div>
         </div>
       </div>
 
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-6 py-5 md:px-10">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/logouno.png"
-              alt="Logo FUTURODEFE"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
+      <header className="border-b border-slate-200 bg-[#D4AF37]">
+        <div className="mx-auto flex h-[33px] max-w-7xl items-center justify-end px-6 md:px-10">
+          <div className="relative">
+            <button
+              onClick={() => setMostrarMenuTi(!mostrarMenuTi)}
+              className="text-[14px] font-normal text-[#0f3b2e] hover:text-[#d4af37]"
+            >
+              Soluciones para ti
+            </button>
 
-            <div>
-              <h1 className="text-3xl font-extrabold leading-none text-[#0f3b2e]">
-                FUTURODEFE
-              </h1>
-              <p className="mt-1 text-sm text-slate-500">
-                Fe que impulsa tu futuro.
-              </p>
-            </div>
+            {mostrarMenuTi && (
+              <div className="absolute right-0 top-full z-50 mt-3 w-[260px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
+                <button
+                  onClick={() => {
+                    setMostrarMenuTi(false);
+                    setMostrarCreditos(true);
+                  }}
+                  className="flex w-full items-center justify-between px-5 py-4 text-left text-lg text-slate-700 hover:bg-slate-50"
+                >
+                  Créditos
+                  <span className="text-[#0f3b2e]">›</span>
+                </button>
+              </div>
+            )}
           </div>
-
-          <nav className="hidden items-center gap-8 text-lg font-medium text-[#0f3b2e] lg:flex">
-            <div className="relative">
-              <button
-                onClick={() => setMostrarMenuTi(!mostrarMenuTi)}
-                className="flex items-center gap-2 hover:text-[#d4af37]"
-              >
-                Soluciones para ti
-                <span className="text-sm"></span>
-              </button>
-
-              {mostrarMenuTi && (
-                <div className="absolute left-0 top-full z-50 mt-3 w-[260px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
-                  <button
-                    onClick={() => {
-                      setMostrarMenuTi(false);
-                      setMostrarCreditos(true);
-                    }}
-                    className="flex w-full items-center justify-between px-5 py-4 text-left text-lg text-slate-700 hover:bg-slate-50"
-                  >
-                    Créditos
-                    <span className="text-[#0f3b2e]">›</span>
-                  </button>
-                </div>
-              )}
-            </div>
-          </nav>
         </div>
       </header>
 
@@ -386,58 +350,83 @@ export default function Home() {
       </section>
 
       {mostrarPuntos && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-          <div className="w-full max-w-6xl rounded-2xl bg-white shadow-2xl">
-            <div className="flex items-center justify-between border-b px-6 py-4">
-              <h2 className="text-2xl font-normal text-slate-600">
-                Puntos de atención
-              </h2>
-              <button
-                onClick={() => setMostrarPuntos(false)}
-                className="text-3xl text-slate-500 hover:text-black"
-              >
-                ×
-              </button>
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/50 px-4 py-6">
+          <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-white shadow-2xl">
+
+            {/* Botón cerrar */}
+            <button
+              onClick={() => setMostrarPuntos(false)}
+              className="absolute right-5 top-5 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white text-3xl text-slate-600 shadow-md hover:text-black"
+            >
+              ×
+            </button>
+
+            {/* Banner superior */}
+            <div className="relative h-[265px] w-full md:h-[342px]">
+              <Image
+                src="/sucursales.png"
+                alt="Agencias y sucursales FUTURODEFE"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
 
-            <div className="grid gap-6 p-6 md:grid-cols-[320px_1fr]">
-              <div className="space-y-4">
-                <div className="rounded-2xl border border-slate-200 p-4">
-                  <h3 className="text-lg font-bold text-[#0f3b2e]">
-                    Oficina Central
-                  </h3>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Zona Ferropetrol, calle Tomas Rivas entre calles 5 "A" y 11
-                    de junio
-                  </p>
-                  <a
-                    href="https://www.google.com/maps?q=-16.50456,-68.16626"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block font-semibold text-[#0f3b2e] underline"
-                  >
-                    Abrir en Google Maps
-                  </a>
+            {/* Contenido inferior */}
+            <div className="bg-white px-6 py-8 md:px-8 md:py-10">
+              <h2 className="text-3xl font-bold text-[#0f3b2e] md:text-4xl">
+                Agencias y sucursales
+              </h2>
+              <p className="mt-3 max-w-3xl text-lg leading-8 text-slate-600">
+                Encuentra tu punto de atención más cercano y ubícalo fácilmente en el mapa.
+              </p>
+
+              <div className="mt-8 grid gap-6 md:grid-cols-[320px_1fr]">
+                {/* Columna izquierda */}
+                <div className="space-y-5">
+                  <div className="rounded-3xl border border-slate-200 bg-[#f8fafc] p-5 shadow-sm">
+                    <h3 className="text-2xl font-bold text-[#0f3b2e]">
+                      Oficina Central
+                    </h3>
+                    <p className="mt-3 text-lg leading-8 text-slate-600">
+                      Zona Ferropetrol, calle Tomas Rivas entre calles 5 "A" y 11 de junio
+                    </p>
+                    <a
+                      href="https://www.google.com/maps?q=-16.50456,-68.16626"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block text-lg font-semibold text-[#0f3b2e] underline"
+                    >
+                      Abrir en Google Maps
+                    </a>
+                  </div>
+
+                  <div className="rounded-3xl border border-slate-200 bg-[#f8fafc] p-5 shadow-sm">
+                    <h3 className="text-2xl font-bold text-[#0f3b2e]">
+                      Sucursal
+                    </h3>
+                    <p className="mt-3 text-lg leading-8 text-slate-600">
+                      Av. Juan Pablo II N°20 (lado Parqueo EL CEIBO y Cajero BCP),
+                      El Alto, La Paz - Bolivia
+                    </p>
+                    <a
+                      href="https://www.google.com/maps?q=-16.50258,-68.16431"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block text-lg font-semibold text-[#0f3b2e] underline"
+                    >
+                      Abrir en Google Maps
+                    </a>
+                  </div>
                 </div>
 
-                <div className="rounded-2xl border border-slate-200 p-4">
-                  <h3 className="text-lg font-bold text-[#0f3b2e]">Sucursal</h3>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Av. Juan Pablo II N°20 (lado Parqueo EL CEIBO y Cajero BCP),
-                    El Alto, La Paz - Bolivia
-                  </p>
-                  <a
-                    href="https://www.google.com/maps?q=-16.50258,-68.16431"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block font-semibold text-[#0f3b2e] underline"
-                  >
-                    Abrir en Google Maps
-                  </a>
+                {/* Mapa */}
+                <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
+                  <div className="h-[420px] md:h-[520px]">
+                    <MapaPuntos />
+                  </div>
                 </div>
               </div>
-
-              <MapaPuntos />
             </div>
           </div>
         </div>
